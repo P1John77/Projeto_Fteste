@@ -48,19 +48,86 @@ public class Produto {
     }
 
 
+    // Adicione os getters e setters que faltam
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public String getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(String tamanho) {
+        this.tamanho = tamanho;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public int getQuantidadeEstoque() {
+        return quantidadeEstoque;
+    }
+
+    public void setQuantidadeEstoque(int quantidadeEstoque) {
+        this.quantidadeEstoque = quantidadeEstoque;
+    }
+
+    public String getUrlPostInstagram() {
+        return urlPostInstagram;
+    }
+
+    public void setUrlPostInstagram(String urlPostInstagram) {
+        this.urlPostInstagram = urlPostInstagram;
+    }
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
+    }
+
+
 
     @Override
     public String toString() {
         return "Produto{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
+                ", descricao='" + descricao + '\'' +
                 ", preco=" + preco +
                 ", tamanho='" + tamanho + '\'' +
+                ", cor='" + cor + '\'' +
+                ", categoria='" + categoria + '\'' +
+                ", quantidadeEstoque=" + quantidadeEstoque +
+                ", urlPostInstagram='" + urlPostInstagram + '\'' +
                 ", disponivel=" + disponivel +
                 '}';
-    }
-
-    public String getDescricao() {
-        return "";
     }
 }
