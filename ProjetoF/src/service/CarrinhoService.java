@@ -22,4 +22,10 @@ public class CarrinhoService {
     public double calcularTotal() {
         return itens.stream().mapToDouble(Produto::getPreco).sum();
     }
+
+    public void limparCarrinho() {
+    }
+
+    public void removerItem(int indice) {
+    }
 }
