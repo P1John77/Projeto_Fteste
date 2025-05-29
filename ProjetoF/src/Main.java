@@ -20,7 +20,6 @@ public class Main {
 
     private static Scanner scanner = new Scanner(System.in);
     private static Usuario usuarioAtual;
-
     public static void main(String[] args) {
         inicializarSistema();
         menuPrincipal();
@@ -52,12 +51,11 @@ public class Main {
             System.out.println("1. Gerenciar Produtos");
             System.out.println("2. Gerenciar Carrinho");
             System.out.println("3. Comparar Produtos");
-            System.out.println("4. Gerenciar Alertas de Preço");
-            System.out.println("5. Gerenciar Avaliações");
-            System.out.println("6. Histórico do Usuário");
-            System.out.println("7. Gerenciar Perguntas");
-            System.out.println("8. Produtos Personalizados");
-            System.out.println("9. Serviços Adicionais");
+            System.out.println("4. Gerenciar Avaliações");
+            System.out.println("5. Histórico do Usuário");
+            System.out.println("6. Gerenciar Perguntas");
+            System.out.println("7. Produtos Personalizados");
+            System.out.println("8. Serviços Adicionais");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
 
@@ -75,21 +73,18 @@ public class Main {
                     menuComparador();
                     break;
                 case 4:
-                    menuAlertasPreco();
-                    break;
-                case 5:
                     menuAvaliacoes();
                     break;
-                case 6:
+                case 5:
                     menuHistoricoUsuario();
                     break;
-                case 7:
+                case 6:
                     menuPerguntas();
                     break;
-                case 8:
+                case 7:
                     menuProdutosPersonalizados();
                     break;
-                case 9:
+                case 8:
                     menuServicosAdicionais();
                     break;
                 case 0:
