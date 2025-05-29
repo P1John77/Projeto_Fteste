@@ -1,6 +1,12 @@
 package model;
 
+import java.util.List;
+import java.util.Set;
+
 public class Produto {
+    private Set<String> tags;
+    private List<Avaliacao> avaliacoes;
+    private int visualizacoes;
     private Integer id;
     private String nome;
     private String descricao;
@@ -129,5 +135,12 @@ public class Produto {
                 ", urlPostInstagram='" + urlPostInstagram + '\'' +
                 ", disponivel=" + disponivel +
                 '}';
+    }
+
+    public void setTags(Set<String> tags) {
+    }
+
+    public Set<String> getTags() {
+        return Set.of();
     }
 }
