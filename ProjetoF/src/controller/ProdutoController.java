@@ -2,12 +2,13 @@ package controller;
 
 import model.Produto;
 import service.ProdutoService;
+import service.CarrinhoService;
 
 import java.util.List;
 
 public class ProdutoController {
-
     private ProdutoService produtoService = new ProdutoService();
+    private CarrinhoService carrinhoService = new CarrinhoService();
 
     public Produto salvar(Produto produto) {
         return produtoService.salvar(produto);
@@ -26,14 +27,18 @@ public class ProdutoController {
     }
 
     public void adicionarAoCarrinho(Produto produto) {
-        produtoService.adicionarAoCarrinho(produto);
+        carrinhoService.adicionarItem(produto);
     }
 
     public List<Produto> visualizarCarrinho() {
-        return produtoService.getCarrinho();
+        return carrinhoService.getItens();
     }
 
     public void limparCarrinho() {
-        produtoService.limparCarrinho();
+        carrinhoService.limpar();
+    }
+
+    public double calcularTotalCarrinho() {
+        return carrinhoService.calcularTotal();
     }
 }
