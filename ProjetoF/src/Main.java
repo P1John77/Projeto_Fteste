@@ -1,7 +1,5 @@
-// Arquivo: Main.java
 import controller.ProdutoController;
 import model.Produto;
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,7 +22,7 @@ public class Main {
             System.out.print("Escolha uma opção: ");
 
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -129,8 +127,6 @@ public class Main {
         String descricao = scanner.nextLine();
         if (!descricao.isEmpty()) produto.setDescricao(descricao);
 
-        // Continue para todos os outros campos...
-
         produtoController.salvar(produto);
         System.out.println("Produto atualizado com sucesso!");
     }
@@ -169,12 +165,10 @@ public class Main {
             System.out.println("Carrinho vazio!");
         } else {
             System.out.println("\n=== CARRINHO DE COMPRAS ===");
-            double total = 0;
             for (Produto p : carrinho) {
                 System.out.println(p.getNome() + " - R$" + p.getPreco());
-                total += p.getPreco();
             }
-            System.out.println("TOTAL: R$" + total);
+            System.out.println("TOTAL: R$" + produtoController.calcularTotalCarrinho());
         }
     }
 
