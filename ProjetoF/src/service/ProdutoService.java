@@ -1,14 +1,11 @@
 package service;
 
 import model.Produto;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoService {
-
-    List<Produto> produtos = new ArrayList<>();
-    List<Produto> carrinho = new ArrayList<>();
+    private List<Produto> produtos = new ArrayList<>();
     private int nextId = 1;
 
     public Produto salvar(Produto produto) {
@@ -36,17 +33,5 @@ public class ProdutoService {
 
     public boolean removerProduto(Integer id) {
         return produtos.removeIf(p -> p.getId().equals(id));
-    }
-
-    public void adicionarAoCarrinho(Produto produto) {
-        carrinho.add(produto);
-    }
-
-    public List<Produto> getCarrinho() {
-        return carrinho;
-    }
-
-    public void limparCarrinho() {
-        carrinho.clear();
     }
 }
